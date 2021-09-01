@@ -7,7 +7,6 @@ html, body {
   --premium-limes-yellow-color: #FFF400;
   --premium-limes-red-color: #E1231A;
   --premium-limes-orange-color: #F68C09;
-  scroll-behavior: smooth;
   background: url('../img/background-home.png') no-repeat center center fixed;
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -79,6 +78,8 @@ body {
   justify-content: center;
   padding: 0 25px;
   margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 /*.container-section-body__notices {
@@ -153,11 +154,6 @@ body {
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
 }
 
 /* Next & previous buttons */
