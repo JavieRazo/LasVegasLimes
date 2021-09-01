@@ -14,18 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("Nav; ", navbar);
   const offsetTopNav = navbar.offsetTop;
   console.log("offfssettop ; ", offsetTopNav)*/
-  window.addEventListener('scroll', addedBehaviorNavFixed);
+  /*let body = document.getElementsByClassName('container-section-body');
+  console.log("VBodys ", body[0])
+  body[0].addEventListener('scroll', addedBehaviorNavFixed);
+  */
+  // new Splide('.splide').mount();
+
   addedSmoothEffect();
 
   function addedSmoothEffect() {
-    const links = [...document.querySelectorAll('.container-navbar nav ul li')];
+    const links = [...document.querySelectorAll('.container-section-navbar nav ul li')];
     console.log("Links ::: ", links);
     links.forEach(link => link.addEventListener('click', smoothEffect));
   }
 
   function smoothEffect(e) {
+    console.log("E ", e)
     e.prevetDefault();
     const href = this.getAttribute('href');
+    console.log("Href: ", href)
     const offsetTop = document.querySelector(href).offsetTop;
     scroll({
       top: offsetTop,
@@ -34,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function addedBehaviorNavFixed() {
-    const navbar = document.querySelector('#lime-navbar');
+    // sconsole.log("Scroll ", document.querySelector('#limes-alert'), window.scrollY)
+    /*const navbar = document.querySelector('#lime-navbar');
     const footer = document.querySelector('#lime-footer');
     if (window.scrollY >= 230) {
       navbar.classList.add('container-navbar__navbar-fixed');
@@ -42,8 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       navbar.classList.remove('container-navbar__navbar-fixed');
       footer.classList.remove('container-footer__footer-fixed');
-    }
-
+    }*/
   }
 
 
